@@ -10,7 +10,6 @@ eventRouter.use(express.json());
 // GET ALL
 eventRouter.get("/", async (_req, res) => {
     const docs = await collections.events?.find({}).toArray();
-    console.log(docs);
     const events = mapEvents(docs!);
     res.status(200).json(events);
 });

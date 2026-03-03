@@ -67,6 +67,20 @@
   flex-basis: calc(13.7% - 1px);
 }
 
+.eventCard {
+  border: 1px solid white;
+  background-color: rgb(113, 113, 113);
+  border-radius: 10px;
+  height: 110px;
+  margin: 3px;
+}
+
+.eventCard-title {
+  font-size: large;
+  display: block;
+  margin-bottom: 5px;
+}
+
 .ew-label {
   font-size: larger;
   padding: 5px;

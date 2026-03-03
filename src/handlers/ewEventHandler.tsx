@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { Event } from "../../shared/src/event"; 
-import { formatLocalDate } from "../utils/useCalender";
+import { formatDateDB } from "../utils/useCalender";
 
 const getAllEvents = (): Promise<Event[]> => {
     return axios.get<Event[]>('http://localhost:8080/events')
@@ -25,7 +25,7 @@ const getEventById = (id: string): Promise<Event> => {
 }
 
 const getEventsInPeriod = (startDate: Date, endDate: Date): Promise<Event[]> => {
-    return axios.get<Event>('http://localhost:8080/events/range', {params: {start: formatLocalDate(startDate), end: formatLocalDate(endDate)}})
+    return axios.get<Event>('http://localhost:8080/events/range', {params: {start: formatDateDB(startDate), end: formatDateDB(endDate)}})
         .then((response) => {
             return response.data;
         })
