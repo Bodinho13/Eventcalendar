@@ -47,8 +47,6 @@ const createNewEvent = (newEvent: Event): Promise<Response> => {
 }
 
 const updateEvent = (event: Event): Promise<Response> => {
-    const url = "http://localhost:8080/events/" + event.id;
-    console.log(event, url);
     return axios.put(`http://localhost:8080/events/${event.id}`, event)
         .then((response) => {
             return response;
@@ -56,7 +54,23 @@ const updateEvent = (event: Event): Promise<Response> => {
         .catch((error) => {
             console.error("There was an error updating the event.", error);
             return error;
-        })
+        });
+}
+
+const deleteEvents = (events: Event[]): Promise<any> => {
+    let promises = [];
+    for(const event of events) {
+        promises.push(axios.delete(`http://localhost:8080/events/${event.id}`)
+            .then((response) => {
+                return response;
+            })
+            .catch((error) => {
+                console.error(`There was an error deleting the event ${event.eventName}.`, error);
+                return error;
+            })
+        );
+    }
+    return Promise.all(promises);
 }
 
 export {
@@ -64,5 +78,6 @@ export {
     getEventById,
     getEventsInPeriod,
     createNewEvent,
-    updateEvent
+    updateEvent,
+    deleteEvents
 }
