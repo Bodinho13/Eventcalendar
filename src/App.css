@@ -33,6 +33,23 @@
   }
 }
 
+#btn-delete {
+  background-color: red;
+  margin-right: 5px;
+}
+
+#btn-cancel {
+  background-color: rgb(62, 62, 62);
+  margin-left: 5px;
+}
+
+#btn-select {
+  position: absolute;
+  right: 30px;
+  left: auto;
+  background-color: rgb(62, 62, 62);
+}
+
 .card {
   padding: 2em;
 }
@@ -52,6 +69,15 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.cardInfo {
+  text-align: left;
+}
+
+.cardSection {
+
+}
+
 .changeMonthSpan {
   align-self: center;
   padding: 3px;
@@ -71,8 +97,17 @@
   border: 1px solid white;
   background-color: rgb(113, 113, 113);
   border-radius: 10px;
-  height: 110px;
-  margin: 3px;
+  min-height: 110px;
+  margin: 3px auto 3px auto;
+  width: 60%;
+}
+
+.eventCard-check {
+  align-self: center;
+  position: absolute;
+  left: 23%;
+  height: 20px;
+  width: 20px;
 }
 
 .eventCard-title {
@@ -104,6 +139,10 @@
   width: 300px;
 }
 
+.footer-buttons {
+  margin: 10px auto;
+}
+
 .menu {
   display: flex;
   flex-wrap: wrap;
@@ -116,6 +155,19 @@
 
 .pastDate {
   color: #888;
+}
+
+.summaryTitle {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  width: 1000px;
+}
+
+.summaryTitle span {
+  font-size: x-large;
+  justify-self: center;
+  margin: 10px auto;
 }
 
 .textTile {
