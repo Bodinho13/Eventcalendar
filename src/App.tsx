@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css'
-import { EwCalender } from './components/ewCalender';
+import { EwCalendar } from './components/EwCalendar';
 import { EwEventForm } from './components/EwEventForm';
 import { EwSummary } from './components/EwSummary';
 import { EwMenu } from './components/EwMenu';
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<EwMenu />} >
-          <Route path="calender" element={<EwCalender />} />
+          <Route path="calendar" element={<EwCalendar />} />
           <Route path="summary" element={<EwSummary />} />
           <Route path="event" element={<EwEventForm />} />
           <Route path="event/:eventId" element={<EwEventForm />} />
