@@ -13,7 +13,7 @@ const EwMenu = () => {
                             display: "block",
                             color: isActive ? "red" : "",
                         }
-                    }} to={'/calender'} >
+                    }} to={'/calendar'} >
                         Kalender
                     </NavLink>
                     <NavLink className={"menu-item"} style={({ isActive }) => {

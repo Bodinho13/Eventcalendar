@@ -1,6 +1,6 @@
 import axios from "axios";
 import type { Event } from "../../shared/src/event"; 
-import { formatDateDB } from "../utils/useCalender";
+import { formatDateDB } from "../utils/useCalendar";
 
 const getAllEvents = (): Promise<Event[]> => {
     return axios.get<Event[]>('http://localhost:8080/events')

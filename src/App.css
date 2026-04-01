@@ -58,24 +58,20 @@
   color: #888;
 }
 
-.calenderTitle {
+.calendarTitle {
   display: flex;
   flex-flow: row;
   width: 100%;
   justify-content: space-between;
 }
 
-.calenderWeek {
+.calendarWeek {
   display: flex;
   flex-wrap: wrap;
 }
 
 .cardInfo {
   text-align: left;
-}
-
-.cardSection {
-
 }
 
 .changeMonthSpan {

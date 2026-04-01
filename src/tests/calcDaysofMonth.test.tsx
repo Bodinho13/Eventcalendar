@@ -1,4 +1,4 @@
-import {calcDaysOfMonth} from '../utils/useCalender';
+import {calcDaysOfMonth} from '../utils/useCalendar';
 
 
 describe('Calculate how many days the given month has', () => {

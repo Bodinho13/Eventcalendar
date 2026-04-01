@@ -3,7 +3,7 @@ import { EwLabelInputBox } from "./EwLabelInputBox";
 import { getEventById, createNewEvent, updateEvent } from "../handlers/ewEventHandler";
 import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 import type { Event } from "../../shared/src/event";
-import { formatDateDB } from "../utils/useCalender";
+import { formatDateDB } from "../utils/useCalendar";
 
 
 const EwEventForm = () => {
@@ -76,7 +76,7 @@ const EwEventForm = () => {
 
         const res = await createNewEvent(event);
         if(res.status == 201){
-            navigate("/calender");
+            navigate("/calendar");
         }
     }
 
@@ -86,7 +86,7 @@ const EwEventForm = () => {
 
         const res = await updateEvent(event);
         if(res.status == 200){
-            navigate("/calender");
+            navigate("/calendar");
         }
     }
 

@@ -1,11 +1,11 @@
 import { EwDateTile } from "./EwDateTile";
 import { EwTextTile } from "./EwTextTile";
-import { calcDaysOfMonth, months, weekdays, isSameDate } from "../utils/useCalender";
+import { calcDaysOfMonth, months, weekdays, isSameDate } from "../utils/useCalendar";
 import { getEventsInPeriod } from "../handlers/ewEventHandler";
 import { useEffect, useState } from "react";
 import type { Event } from "../../shared/src/event";
 
-const EwCalender = () => {
+const EwCalendar = () => {
     const today = new Date();
     const [month, setMonth] = useState(today.getMonth() + 1);
     const [year, setYear] = useState(today.getFullYear());
@@ -60,12 +60,12 @@ const EwCalender = () => {
 
     return (
         <div>
-            <div className="calenderTitle">
+            <div className="calendarTitle">
                 <span className="changeMonthSpan" onClick={() => changeMonth(false)}>{"<< " + months[month -1]}</span>
                 <h2>{months[month]} {year}</h2>
                 <span className="changeMonthSpan" onClick={() => changeMonth(true)}>{months[month +1] + " >>"}</span>
             </div>
-            <div className="calenderWeek">
+            <div className="calendarWeek">
                 {weekTiles}
                 {days}
             </div>
@@ -74,5 +74,5 @@ const EwCalender = () => {
 }
 
 export {
-    EwCalender
+    EwCalendar
 }
